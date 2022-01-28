@@ -12,16 +12,15 @@ fi
 
 # Upgrade pip
 $VENV/bin/pip install -U pip
-rm -rf timetable
 
 # Installing requirements from file
-# $VENV/bin/pip install -r requirements.txt
+$VENV/bin/pip install -r requirements.txt
 
 # # Do migrate (for creating tables in the database) 
-# $VENV/bin/python src/manage.py migrate
-# $VENV/bin/python src/manage.py collectstatic --no-input
+$VENV/bin/python src/manage.py migrate
+$VENV/bin/python src/manage.py collectstatic --no-input
 
 # # Run Django
-# echo "Run Django"
-# $VENV/bin/python src/manage.py runserver 0.0.0.0:8000
-# echo "Django Killed"
+echo "Run Django"
+$VENV/bin/python src/manage.py runserver 0.0.0.0:8000
+echo "Django Killed"
