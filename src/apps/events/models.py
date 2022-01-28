@@ -1,9 +1,15 @@
+from django.contrib.auth import get_user_model
 from django.db import models
+
+
+User = get_user_model()
 
 
 class Event(models.Model):
     """ Event - title, category and color of case """
     title = models.CharField(max_length=255)
+    color = models.CharField(max_length=10, help_text="#000000", default="#000000")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         db_table = 'event'
