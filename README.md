@@ -15,7 +15,7 @@ __image, overview and description__
 ## Install App
 
 ```bash
-git clone ...
+git clone git@github.com:shaggy-axel/timetable_bot.git
 cd timetable_bot
 cat env_sample > .env
 # change values in `.env`
@@ -23,6 +23,24 @@ docker-compose up -d
 ```
 
 ## How does it work
+
+```
+the logic is this:
+1. CLIENT | User adds an event
+2. CLIENT | The user adds the time when the event will be executed
+
+3. SERVER | An event is created, the time of the events is added to the timetable
+               |__ in view: Event get or create (user=request.user, ...)
+                  |__ save timetable_updated_date and username to variables
+               |
+4. SERVER | Updates the change time of the user's timetable
+               |__ {user.username}_{timetable_updated_date}.yml is created
+                  |__ in view services.create_yml_for_user(user)
+               |__ Runs pdfschedule {username}_{timetable_updated_date}.yml
+               |__ Remove yml file
+               |__ Renders a new "{username}_{timetable_updated_date}.pdf" referenced
+                                    "/users/{username}/timetable"
+```
 
 ## Yaml TimeTable Settings Format
 ------------------------------------------------
@@ -59,11 +77,6 @@ __`color`__ <br>
    `--color` is in effect, taken from a small palette of basic colors based
    on the event's index.
 ------------------------------------------------
-
-
-```python
-
-```
 
 
 ## Documentation
