@@ -4,7 +4,7 @@ from apps.events.exceptions import ValidationEventError
 from apps.events.models import Event, EventTime
 
 
-class UserEventManager:
+class TimeTableManager:
     def __init__(self, user):
         self.user = user
 
