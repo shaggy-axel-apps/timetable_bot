@@ -1,5 +1,4 @@
 # Telegram TimeTable Bot
-__image, overview and description__
 
 ## Technologies
 [![python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=Python)](https://github.com/python)
