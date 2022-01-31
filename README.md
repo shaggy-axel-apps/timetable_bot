@@ -2,15 +2,17 @@
 __image, overview and description__
 
 ## Technologies
-![python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=Python)
-![docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=Docker)
-![django](https://img.shields.io/badge/Django-000000?style=for-the-badge&logo=Django)
-![telegram](https://img.shields.io/badge/Aiogram-000000?style=for-the-badge&logo=Telegram)
+[![python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=Python)](https://github.com/python)
+[![docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=Docker)](https://www.docker.com)
+[![django](https://img.shields.io/badge/Django-000000?style=for-the-badge&logo=Django)](https://github.com/django/django)
+
+
+[![telegram](https://img.shields.io/badge/Aiogram-000000?style=for-the-badge&logo=Telegram)](https://github.com/aiogram)
+[![pdfschedule](https://img.shields.io/badge/PDFSchedule-000000?style=for-the-badge&logo=Adobe&logoColor=red)](https://github.com/jwodder/schedule)
 
 
 ![postgresql](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=PostgreSQL)
 ![nginx](https://img.shields.io/badge/Nginx-000000?style=for-the-badge&logo=Nginx&logoColor=green)
-![pandas](https://img.shields.io/badge/Pandas-000000?style=for-the-badge&logo=Pandas)
 
 ## Install App
 
