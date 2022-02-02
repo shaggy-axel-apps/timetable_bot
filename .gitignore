@@ -1,5 +1,6 @@
 .env
 .venv
+.venv-vs-code
 env
 venv
 

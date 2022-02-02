@@ -1,5 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.template.defaultfilters import slugify
+from django.urls import reverse
 
 
 User = get_user_model()
@@ -10,6 +12,18 @@ class Event(models.Model):
     title = models.CharField(max_length=255)
     color = models.CharField(max_length=10, help_text="#000000", default="#000000")
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    slug = models.SlugField(null=False, unique=True)
+
+    def __str__(self) -> str:
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('event_detail', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(f"{self.user.username} {self.title}")
+        return super().save(*args, **kwargs)
 
     class Meta:
         db_table = 'event'
