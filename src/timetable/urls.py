@@ -6,4 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('rest_framework.urls')),
     path('api/profiles/', include('apps.profiles.urls')),
+
+    path('api/events/', include('apps.events.urls')),
 ]
