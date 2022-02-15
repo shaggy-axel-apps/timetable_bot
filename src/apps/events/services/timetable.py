@@ -11,8 +11,8 @@ class TimeTableManager:
     def event_exists(self, event_name: str) -> bool:
         return Event.objects.exists(user=self.user, title=event_name)
 
-    def event_create(self, event_name: str) -> Event:
-        return Event.objects.get_or_create(user=self.user, title=event_name)[0]
+    def event_create(self, event_name: str, event_color: str) -> Event:
+        return Event.objects.get_or_create(user=self.user, title=event_name, color=event_color)[0]
 
     def event_update(self, current: Optional[dict], new: Optional[dict]):
         if current and new:
